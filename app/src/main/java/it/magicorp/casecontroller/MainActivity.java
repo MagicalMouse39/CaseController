@@ -1,29 +1,42 @@
 package it.magicorp.casecontroller;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.AbstractMap;
-
 public class MainActivity extends AppCompatActivity
 {
     @Override
-    protected void onCreate(Bundle savedInstanceState)
+    protected void onCreate(final Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_colour);
+        this.setContentView(R.layout.activity_main);
 
-        /*Button btn = this.findViewById(R.id.testRed);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button colourManager = this.findViewById(R.id.colourManager);
+
+        colourManager.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View v)
             {
-                HttpUtils.Post(new AbstractMap.SimpleEntry<String, Object>("colour", "255:0:0"));
+                MainActivity.this.startActivity(new Intent(MainActivity.this, ColourManagerActivity.class));
             }
-        });*/
+        });
+
+        Button textManager = this.findViewById(R.id.textManager);
+
+        textManager.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                MainActivity.this.startActivity(new Intent(MainActivity.this, TextManagerActivity.class));
+            }
+        });
     }
 }

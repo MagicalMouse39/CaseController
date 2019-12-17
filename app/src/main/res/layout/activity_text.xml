@@ -5,31 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark1"
-    tools:context=".MainActivity">
+    tools:context=".ColourManagerActivity">
 
     <Button
-        android:id="@+id/colourManager"
-        android:layout_width="296dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/gradient_button_orange"
-        android:text="Colour Manager"
+        android:id="@+id/setText"
+        android:layout_width="265dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="344dp"
+        android:background="@drawable/utility_btn"
+        android:text="Set Text"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:text="Set Color" />
 
-    <Button
-        android:id="@+id/textManager"
-        android:layout_width="296dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="130dp"
-        android:background="@drawable/gradient_button_green"
-        android:text="Text Manager"
+    <EditText
+        android:id="@+id/phraseGen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:shadowColor="@color/white"
+        android:hint="Text"
+        android:textColorHint="@color/whiteHint"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

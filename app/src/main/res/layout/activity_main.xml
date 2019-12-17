@@ -10,9 +10,11 @@
         android:id="@+id/testRed"
         android:layout_width="122dp"
         android:layout_height="59dp"
+        android:layout_marginTop="608dp"
         android:text="RED"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="300dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"

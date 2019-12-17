@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_colour);
 
-        Button btn = this.findViewById(R.id.testRed);
+        /*Button btn = this.findViewById(R.id.testRed);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -24,6 +24,6 @@ public class MainActivity extends AppCompatActivity
             {
                 HttpUtils.Post(new AbstractMap.SimpleEntry<String, Object>("colour", "255:0:0"));
             }
-        });
+        });*/
     }
 }

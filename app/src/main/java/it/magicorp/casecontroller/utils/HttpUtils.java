@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class HttpUtils
 {
-    public static void Post(final Map.Entry<String, Object>... args)
+    public static void post(final Map.Entry<String, Object>... args)
     {
         new Thread(new Runnable()
         {

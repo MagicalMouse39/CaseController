@@ -8,7 +8,6 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.AbstractMap;
-import java.util.Map;
 
 import it.magicorp.casecontroller.utils.HttpUtils;
 
@@ -29,7 +28,7 @@ public class TextManagerActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                HttpUtils.Post(new AbstractMap.SimpleEntry<String, Object>("phrase", editText.getText().toString().toUpperCase() + ":-48384"));
+                HttpUtils.post(new AbstractMap.SimpleEntry<String, Object>("phrase", editText.getText().toString().toUpperCase() + ":-48384"));
             }
         });
     }

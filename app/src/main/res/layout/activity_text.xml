@@ -11,14 +11,14 @@
         android:id="@+id/setText"
         android:layout_width="265dp"
         android:layout_height="71dp"
-        android:layout_marginBottom="344dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/utility_btn"
         android:text="Set Text"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="Set Color" />
+        tools:text="Set Text" />
 
     <EditText
         android:id="@+id/phraseGen"
@@ -32,6 +32,15 @@
         android:hint="Text"
         android:textColorHint="@color/whiteHint"
         android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.larswerkman.holocolorpicker.ColorPicker
+        android:id="@+id/colorPicker2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

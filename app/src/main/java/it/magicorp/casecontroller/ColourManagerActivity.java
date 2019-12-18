@@ -1,12 +1,10 @@
 package it.magicorp.casecontroller;
 
-import android.graphics.ColorMatrixColorFilter;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -71,7 +69,7 @@ public class ColourManagerActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 int[] rgb = ColorUtils.fromIntToRGB(opacityBar.getColor());
-                HttpUtils.Post(new AbstractMap.SimpleEntry<String, Object>("colour", rgb[0] + ":" + rgb[1] + ":" + rgb[2]), new AbstractMap.SimpleEntry<String, Object>("brightness", opacityBar.getOpacity()));
+                HttpUtils.post(new AbstractMap.SimpleEntry<String, Object>("colour", rgb[0] + ":" + rgb[1] + ":" + rgb[2]), new AbstractMap.SimpleEntry<String, Object>("brightness", opacityBar.getOpacity()));
             }
         });
     }

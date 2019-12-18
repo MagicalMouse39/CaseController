@@ -11,6 +11,8 @@
     <color name="gradientOrangeBtnEnd">#FF0000</color>
     <color name="gradientGreenBtnStart">#00FF00</color>
     <color name="gradientGreenBtnEnd">#007700</color>
+    <color name="gradientBlueBtnStart">#00aaFF</color>
+    <color name="gradientBlueBtnEnd">#0000FF</color>
     <color name="white">#FFFFFF</color>
     <color name="whiteHint">#55FFFFFF</color>
 </resources>

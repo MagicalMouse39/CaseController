@@ -7,8 +7,11 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.larswerkman.holocolorpicker.ColorPicker;
+
 import java.util.AbstractMap;
 
+import it.magicorp.casecontroller.utils.ColorUtils;
 import it.magicorp.casecontroller.utils.HttpUtils;
 
 public class TextManagerActivity extends AppCompatActivity
@@ -21,6 +24,8 @@ public class TextManagerActivity extends AppCompatActivity
 
         final EditText editText = this.findViewById(R.id.phraseGen);
 
+        final ColorPicker colorPicker = this.findViewById(R.id.textColorPicker);
+
         Button setTextBtn = this.findViewById(R.id.setText);
 
         setTextBtn.setOnClickListener(new View.OnClickListener()
@@ -28,7 +33,8 @@ public class TextManagerActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                HttpUtils.post(new AbstractMap.SimpleEntry<String, Object>("phrase", editText.getText().toString().toUpperCase() + ":-48384"));
+                int[] rgb = ColorUtils.fromIntToRGB(colorPicker.getColor());
+                HttpUtils.post(new AbstractMap.SimpleEntry<String, Object>("phrase", editText.getText().toString().toUpperCase() + ":" + rgb[0] + ":" + rgb[1] + ":" + rgb[2]));
             }
         });
     }

@@ -2,6 +2,8 @@ package it.magicorp.casecontroller.utils;
 
 public class ColorUtils
 {
+    public static int currentColor = 0;
+
     public static int[] fromIntToRGB(int color)
     {
         int[] rgb = new int[3];

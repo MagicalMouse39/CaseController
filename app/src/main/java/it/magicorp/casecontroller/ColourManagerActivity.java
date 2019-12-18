@@ -42,6 +42,7 @@ public class ColourManagerActivity extends AppCompatActivity
             @Override
             public void onColorChanged(int color)
             {
+                ColorUtils.currentColor = color;
                 opacityBar.setColor(color);
                 GradientDrawable gd = new GradientDrawable();
                 gd.setStroke(15, color);

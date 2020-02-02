@@ -7,6 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import it.magicorp.casecontroller.utils.HttpUtils;
+
 public class MainActivity extends AppCompatActivity
 {
     @Override
@@ -44,6 +49,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 MainActivity.this.startActivity(new Intent(MainActivity.this, BrightnessManagerActivity.class));
+            }
+        });
+
+        Button toggleRainbow = this.findViewById(R.id.rainbowToggle);
+
+        toggleRainbow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                HttpUtils.post(new HashMap.SimpleEntry<String, Object>("toggleRainbow", "TEST"));
             }
         });
     }

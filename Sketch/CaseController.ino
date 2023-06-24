@@ -13,7 +13,7 @@ Adafruit_NeoMatrix *matrix = new Adafruit_NeoMatrix(32, 8, PIN,
     NEO_GRB            + NEO_KHZ800);
 
 String ssid = "MagicalWifi";
-String password = "Timotino.12";
+String password = "REDACTED";
 
 bool rainbow = false;
 
